@@ -78,7 +78,7 @@ async function getavatar(username) {
 
     // Code for the basic details
     basicdetails.id = "basicdetails";
-    basicdetails.innerHTML = `<span class="basicdetailsdata">Followers: ${data.followers}</span><br><span class="basicdetailsdata">Following: ${data.following}</span><br><span class="basicdetailsdata">Public Repos: ${data.public_repos}</span><br><span class="basicdetailsdata">Public Gists: ${data.public_gists}</span>`;
+    basicdetails.innerHTML = `<span class="basicdetailsdata">Followers: ${data.followers}</span>  &#160;&#160;&#160;&#160;<span class="basicdetailsdata">Following: ${data.following}</span><br><span class="basicdetailsdata">Public Repos: ${data.public_repos}</span>    &#160;&#160;&#160;&#160;<span class="basicdetailsdata">Public Gists: ${data.public_gists}</span>`;
     
 
     // Appending

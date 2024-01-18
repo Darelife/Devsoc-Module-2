@@ -54,17 +54,57 @@ a:hover {
     margin: 0.25vh 0.25vw 0.25vh 0.25vw;
 }
 
-#userData {
-    display:flex;
+/* #userData {
+    display:grid;
     align-items: center;
     justify-content: center;
+    
 }
-#avatar {
-    float : left;
+#profilePicture {
+    position:relative;
 }
 #name {
-    float : right;
+    position:relative;
+    top: -45%;
 }
+#basicdetails {
+    position:relative;
+    top: 15%;
+    width:100%;
+} */
+
+
+#profilePicture {
+    grid-area : left;
+    align-items: center;
+    justify-content: center;
+    /* padding-right:5vh; */
+
+}
+#name {
+    grid-area : header;
+    text-align: center;
+}
+#basicdetails {
+    grid-area : right;
+    align-items: center;
+    /* width:100%; */
+}
+
+#userData {
+    display:grid;
+    justify-content: center;
+    grid-template-rows: 1 fr 3 fr;
+    grid-template-columns: 1 fr 1 fr;
+    align-items: center;
+    gap:0.75 rem 0.25rem;
+    grid-template-areas: 
+    'left header header'
+    'right right right';
+}
+
+
+
 /* 
 .individualRepoName {
     /* background-color: #000000; */
@@ -101,38 +141,6 @@ a:hover {
     margin: 0.75vh 0.25vw 0.75vh 0.25vw;
 }
 
-
-@media only screen and (max-width: 1000px) {
-    .boxintable{
-        border: 0.3rem solid #2a2b2f;
-        box-sizing: border-box;
-        /* background-color: rgb(10, 10, 10); */
-        background-color: #2a2b2f;
-        width: 45vw;
-        height: auto;
-        /* display:inline; */
-        border-radius: 1rem;
-        padding: 2.5vh 1.5vw 1vh 1.5vw;
-        margin: 0.25vh 0.25vw 0.25vh 0.25vw;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-    .boxintable{
-            border: 0.3rem solid #2a2b2f;
-            box-sizing: border-box;
-            /* background-color: rgb(10, 10, 10); */
-            background-color: #2a2b2f;
-            width: 90vw;
-            height: auto;
-            /* display:inline; */
-            border-radius: 1rem;
-            padding: 2.5vh 1.5vw 1vh 1.5vw;
-            margin: 0.25vh 0.25vw 0.25vh 0.25vw;
-    }
-}
-
 #userData {
     /* border: 0.3rem solid #2a2b2f; */
     box-sizing: border-box;
@@ -147,6 +155,88 @@ a:hover {
     margin: 0.25vh 0.25vw 0.25vh 0.25vw;
 }
 
-#basicdetails {
-    display : block;
+@media only screen and (max-width: 992px) {
+    #userData{
+        border: 0.3rem solid #1f2120;
+        box-sizing: border-box;
+        /* background-color: rgb(10, 10, 10); */
+        background-color: #1f2120;
+        width: 45vw;
+        height: auto;
+        /* display:inline; */
+        border-radius: 1rem;
+        padding: 2.5vh 1.5vw 1vh 1.5vw;
+        margin: 0.25vh 0.25vw 0.25vh 0.25vw;
+    }
+    .boxintable {
+        border: 0.3rem solid #2a2b2f;
+        box-sizing: border-box;
+        /* background-color: rgb(10, 10, 10); */
+        background-color: #2a2b2f;
+        width: 45vw;
+        height: auto;
+        /* display:inline; */
+        border-radius: 1rem;
+        padding: 2.5vh 1.5vw 1vh 1.5vw;
+        margin: 0.25vh 0.25vw 0.25vh 0.25vw;
+    }
+
 }
+
+@media only screen and (max-width: 768px) {
+    #userData{
+            border: 0.3rem solid #1f2120;
+            box-sizing: border-box;
+            /* background-color: rgb(10, 10, 10); */
+            background-color: #1f2120;
+            width: 60vw;
+            height: auto;
+            /* display:inline; */
+            border-radius: 1rem;
+            padding: 2.5vh 1.5vw 1vh 1.5vw;
+            margin: 0.25vh 0.25vw 0.25vh 0.25vw;
+    }
+    .boxintable {
+        border: 0.3rem solid #2a2b2f;
+        box-sizing: border-box;
+        /* background-color: rgb(10, 10, 10); */
+        background-color: #2a2b2f;
+        width: 60vw;
+        height: auto;
+        /* display:inline; */
+        border-radius: 1rem;
+        padding: 2.5vh 1.5vw 1vh 1.5vw;
+        margin: 0.25vh 0.25vw 0.25vh 0.25vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #userData{
+            border: 0.3rem solid #1f2120;
+            box-sizing: border-box;
+            /* background-color: rgb(10, 10, 10); */
+            background-color: #1f2120;
+            width: 90vw;
+            height: auto;
+            /* display:inline; */
+            border-radius: 1rem;
+            padding: 2.5vh 1.5vw 1vh 1.5vw;
+            margin: 0.25vh 0.25vw 0.25vh 0.25vw;
+    }
+    .boxintable {
+        border: 0.3rem solid #2a2b2f;
+        box-sizing: border-box;
+        /* background-color: rgb(10, 10, 10); */
+        background-color: #2a2b2f;
+        width: 90vw;
+        height: auto;
+        /* display:inline; */
+        border-radius: 1rem;
+        padding: 2.5vh 1.5vw 1vh 1.5vw;
+        margin: 0.25vh 0.25vw 0.25vh 0.25vw;
+    }
+}
+
+/* #basicdetails {
+    display : block;
+} */
